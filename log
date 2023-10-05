@@ -61,3 +61,16 @@ sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 cd1a122
+Thu 05 Oct 2023 02:39:31 AM UTC: 
+ sudoku.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:69:33: error: subscripted value is neither array nor pointer nor vector
+   69 |                         nuevo[i][j]=n[k][l];
+      |                                 ^
+sudoku.c:69:41: error: subscripted value is neither array nor pointer nor vector
+   69 |                         nuevo[i][j]=n[k][l];
+      |                                         ^
+Compilation failed
+5b9cc12

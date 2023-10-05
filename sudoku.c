@@ -62,6 +62,13 @@ List* get_adj_nodes(Node* n)
             for(int num=0; num<9 ; num++)
               {
                 Node* nuevo = (Node*)malloc(sizeof(Node));
+                for(int k=0; k<9; k++)
+                  {
+                    for(int l=0; l<9; l++)
+                      {
+                        nuevo[i][j]=n[k][l];
+                      }
+                  }
                 
               }
           }
