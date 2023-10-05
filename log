@@ -19,3 +19,17 @@ sudoku.c:58:15: error: variable ‘j’ set but not used [-Werror=unused-but-set
 cc1: all warnings being treated as errors
 Compilation failed
 6383a13
+Thu 05 Oct 2023 02:35:40 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:18: error: subscripted value is neither array nor pointer nor vector
+   60 |           if(n[i][j]==0)
+      |                  ^
+sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   64 |                 Node* nuevo = (Node*)malloc(sizeof(Node));
+      |                       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ab77f4f
