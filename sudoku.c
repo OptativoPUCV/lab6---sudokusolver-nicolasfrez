@@ -61,11 +61,11 @@ int is_valid(Node* n)
               return 0;
             filas[i][num_fila] = 1;
           }
-          if(num_columna!=0)
+          if(num_columnas!=0)
           {
-            if(columna[i][num_fila]==1)
+            if(columnas[i][num_fila]==1)
               return 0;
-            columna[i][num_fila] = 1;
+            columnas[i][num_fila] = 1;
           }
 
           
