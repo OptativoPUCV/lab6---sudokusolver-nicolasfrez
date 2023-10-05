@@ -33,3 +33,20 @@ sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 ab77f4f
+Thu 05 Oct 2023 02:36:11 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   64 |                 Node* nuevo = (Node*)malloc(sizeof(Node));
+      |                       ^~~~~
+sudoku.c:56:15: error: ‘i’ is used uninitialized [-Werror=uninitialized]
+   56 |   for(int i; i<9; i++)
+      |              ~^~
+sudoku.c:58:19: error: ‘j’ may be used uninitialized [-Werror=maybe-uninitialized]
+   58 |       for(int j; j<9; i++)
+      |                  ~^~
+cc1: all warnings being treated as errors
+Compilation failed
+6e07ac7

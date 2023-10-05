@@ -57,7 +57,7 @@ List* get_adj_nodes(Node* n)
     {
       for(int j; j<9; i++)
         {
-          if(n[i][j]==0)
+          if(n->sudo[i][j]==0)
           {
             for(int num=0; num<9 ; num++)
               {
