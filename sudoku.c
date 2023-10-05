@@ -116,12 +116,12 @@ List* get_adj_nodes(Node* n)
           else
             free(nuevo);
         }
+        break;
       }
       if(encontrado==1)
         break;
     }
-    if(encontrado==1)
-      break;
+
   }
  return list;
 }
