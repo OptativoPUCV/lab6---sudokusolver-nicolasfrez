@@ -50,3 +50,14 @@ sudoku.c:58:19: error: ‘j’ may be used uninitialized [-Werror=maybe-uninitia
 cc1: all warnings being treated as errors
 Compilation failed
 6e07ac7
+Thu 05 Oct 2023 02:36:49 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   64 |                 Node* nuevo = (Node*)malloc(sizeof(Node));
+      |                       ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cd1a122
