@@ -54,26 +54,26 @@ List* get_adj_nodes(Node* n)
   List* list=createList();
 
   for(int i=0; i<9; i++)
+  {
+    for(int j=0; j<9; i++)
     {
-      for(int j=0; j<9; i++)
+      if(n->sudo[i][j]==0)
+      {
+        for(int num=0; num<9 ; num++)
         {
-          if(n->sudo[i][j]==0)
+          Node* nuevo = copy(n);
+          for(int k=0; k<9; k++)
           {
-            for(int num=0; num<9 ; num++)
-              {
-                Node* nuevo = (Node*)malloc(sizeof(Node));
-                for(int k=0; k<9; k++)
-                  {
-                    for(int l=0; l<9; l++)
-                      {
-                        nuevo->sudo[i][j]=n[k][l];
-                      }
-                  }
-                
-              }
-          }
+            for(int l=0; l<9; l++)
+            {
+              nuevo->sudo[i][j]=n->sudo[k][l];
+            }
+          }     
         }
+      }
     }
+  }
+  
 
 
   
