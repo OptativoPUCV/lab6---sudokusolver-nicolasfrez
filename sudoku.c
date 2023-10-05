@@ -76,7 +76,7 @@ int is_valid(Node* n)
           int subMatriz[10] = {0};
           for(int x=i; x<i+3; x++)
           {
-            for(int y=j; y<j; y++)
+            for(int y=j; y<j+3; y++)
               {
                 int numSubMatriz = n->sudo[x][y];
                 if(numSubMatriz!=0)
