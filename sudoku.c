@@ -43,8 +43,27 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
+int is_valid(Node* n)
+{
+  int filas[9][10] = {0};
+  int columnas[9][10] = {0};
+  
+  for(int i=0 ; i<9 ; i++)
+    {
+      for(int j=0; j<0 ; j++)
+        {
+          int num_fila = n->sudo[i][j];
+          int num_columnas = n->sudo[i][j];
 
+          if(num_fila!=0)
+          {
+            if(filas[i][num_fila]==1)
+              return 0;
+          }
+
+          
+        }
+    }
     return 1;
 }
 
@@ -52,7 +71,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n)
 {
   List* list=createList();
-
+/*
   for(int i=0; i<9; i++)
   {
     for(int j=0; j<9; j++)
@@ -69,10 +88,9 @@ List* get_adj_nodes(Node* n)
     }
   }
   
-
+    */
 
     return list;
-    
 }
 
 
