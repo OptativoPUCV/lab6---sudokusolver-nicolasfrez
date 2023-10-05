@@ -115,6 +115,7 @@ List* get_adj_nodes(Node* n)
             free(nuevo);
         }
       }
+      break;
     }
     if(encontrado==1)
       break;
