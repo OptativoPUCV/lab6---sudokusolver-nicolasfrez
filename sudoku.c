@@ -49,8 +49,27 @@ int is_valid(Node* n){
 }
 
 
-List* get_adj_nodes(Node* n){
-    List* list=createList();
+List* get_adj_nodes(Node* n)
+{
+  List* list=createList();
+
+  for(int i; i<9; i++)
+    {
+      for(int j; i<9; i++)
+        {
+          if(n[i][j]==0)
+          {
+            for(int num=0; num<9 ; num++)
+              {
+                Node* nuevo = (Node*)malloc(sizeof(Node));
+                
+              }
+          }
+        }
+    }
+
+
+  
     return list;
 }
 

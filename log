@@ -2,3 +2,20 @@ Thu 05 Oct 2023 02:22:51 AM UTC:
  tests:  0|5
 total_score: 0/70
 c861461
+Thu 05 Oct 2023 02:34:58 AM UTC: 
+ sudoku.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:60:18: error: subscripted value is neither array nor pointer nor vector
+   60 |           if(n[i][j]==0)
+      |                  ^
+sudoku.c:64:23: error: unused variable ‘nuevo’ [-Werror=unused-variable]
+   64 |                 Node* nuevo = (Node*)malloc(sizeof(Node));
+      |                       ^~~~~
+sudoku.c:58:15: error: variable ‘j’ set but not used [-Werror=unused-but-set-variable]
+   58 |       for(int j; i<9; i++)
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+6383a13
