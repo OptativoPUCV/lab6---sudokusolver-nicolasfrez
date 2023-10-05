@@ -53,7 +53,7 @@ int is_valid(Node* n)
       for(int j=0; j<0 ; j++)
         {
           int num_fila = n->sudo[i][j];
-          int num_columnas = n->sudo[i][j];
+          int num_columnas = n->sudo[j][i];
 
           if(num_fila!=0)
           {
