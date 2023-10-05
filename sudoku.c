@@ -105,7 +105,7 @@ List* get_adj_nodes(Node* n)
       if(n->sudo[i][j]==0)
       {
         encontrado = 1;
-        for(int num=0; num<=9 ; num++)
+        for(int num=1; num<=9 ; num++)
         {
           Node* nuevo = copy(n);
           nuevo->sudo[i][j]=num;
