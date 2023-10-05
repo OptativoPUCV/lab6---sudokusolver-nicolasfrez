@@ -110,7 +110,7 @@ List* get_adj_nodes(Node* n)
           if(is_valid(nuevo))
             pushBack(list, nuevo);
           else
-            free(nuevo;)
+            free(nuevo);
         }
       }
     }
