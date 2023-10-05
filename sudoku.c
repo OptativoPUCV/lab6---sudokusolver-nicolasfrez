@@ -63,9 +63,9 @@ int is_valid(Node* n)
           }
           if(num_columnas!=0)
           {
-            if(columnas[i][num_fila]==1)
+            if(columnas[i][num_columnas]==1)
               return 0;
-            columnas[i][num_fila] = 1;
+            columnas[i][num_columnas] = 1;
           }
 
           
