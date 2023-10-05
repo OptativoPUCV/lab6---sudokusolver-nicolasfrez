@@ -104,9 +104,9 @@ List* get_adj_nodes(Node* n)
     {
       if(n->sudo[i][j]==0)
       {
+        encontrado = 1;
         for(int num=0; num<9 ; num++)
         {
-          encontrado=1;
           Node* nuevo = copy(n);
           nuevo->sudo[i][j]=num;
           if(is_valid(nuevo)==1)
@@ -115,14 +115,13 @@ List* get_adj_nodes(Node* n)
             free(nuevo);
         }
       }
-      break;
+      if(encontrado==1)
+        break;
     }
     if(encontrado==1)
       break;
   }
-  
-
-    return list;
+ return list;
 }
 
 
