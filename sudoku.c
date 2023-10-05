@@ -66,7 +66,7 @@ List* get_adj_nodes(Node* n)
                   {
                     for(int l=0; l<9; l++)
                       {
-                        nuevo[i][j]=n[k][l];
+                        nuevo->sudo[i][j]=n[k][l];
                       }
                   }
                 
