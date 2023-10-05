@@ -67,8 +67,13 @@ int is_valid(Node* n)
               return 0;
             columnas[i][num_columnas] = 1;
           }
-
-          
+        }
+    }
+  for(int i=0 ; i<0 ; i+=3)
+    {
+      for(int j=0; j<9 ; j+=3)
+        {
+          int subMatriz[10] = {0};
         }
     }
     return 1;

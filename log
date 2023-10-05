@@ -188,3 +188,14 @@ Thu 05 Oct 2023 03:19:47 AM UTC:
  tests:  0|5
 total_score: 0/70
 b15559e
+Thu 05 Oct 2023 03:26:00 AM UTC: 
+ sudoku.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:76:15: error: unused variable ‘subMatriz’ [-Werror=unused-variable]
+   76 |           int subMatriz[10] = {0};
+      |               ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b32c8a6
