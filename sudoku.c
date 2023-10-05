@@ -79,7 +79,7 @@ int is_valid(Node* n)
         {
           for(int y=j; y<j; y++)
             {
-              int numSubMatriz = n[x][y];
+              int numSubMatriz = n->sudo[x][y];
               if(numSubMatriz!=0)
               {
                 if(subMatriz[numSubMatriz]==1)

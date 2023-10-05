@@ -221,3 +221,22 @@ sudoku.c:85:20: error: ‘subMatriz’ undeclared (first use in this function); 
 cc1: all warnings being treated as errors
 Compilation failed
 59c893f
+Thu 05 Oct 2023 03:30:06 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:76:15: error: unused variable ‘subMatriz’ [-Werror=unused-variable]
+   76 |           int subMatriz[10] = {0};
+      |               ^~~~~~~~~
+sudoku.c:80:21: error: ‘j’ undeclared (first use in this function)
+   80 |           for(int y=j; y<j; y++)
+      |                     ^
+sudoku.c:80:21: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:85:20: error: ‘subMatriz’ undeclared (first use in this function); did you mean ‘numSubMatriz’?
+   85 |                 if(subMatriz[numSubMatriz]==1)
+      |                    ^~~~~~~~~
+      |                    numSubMatriz
+cc1: all warnings being treated as errors
+Compilation failed
+96adbd2
