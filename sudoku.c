@@ -164,8 +164,8 @@ Node* DFS(Node* initial, int* cont)
       {
         popFront(nodos_adyacentes);
         push(stack, nodos_adyacentes);
-
       }
+      free(current);
       clean(nodos_adyacentes);
     }
   
