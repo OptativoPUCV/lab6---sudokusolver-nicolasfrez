@@ -167,6 +167,7 @@ Node* DFS(Node* initial, int* cont)
       }
       free(current);
       clean(nodos_adyacentes);
+      free(nodos_adyacentes);
     }
   
   return NULL;
