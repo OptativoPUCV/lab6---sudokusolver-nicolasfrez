@@ -1208,3 +1208,19 @@ sudoku.c:167:21: note: each undeclared identifier is reported only once for each
 cc1: all warnings being treated as errors
 Compilation failed
 cfba16c
+Fri 06 Oct 2023 09:56:10 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:163:43: error: comparison between pointer and integer [-Werror]
+  163 |       while((aux==front(nodos_adyacentes))!=NULL)
+      |                                           ^~
+sudoku.c:167:21: error: ‘nodo_adyacente’ undeclared (first use in this function); did you mean ‘nodos_adyacentes’?
+  167 |         if(is_valid(nodo_adyacente))
+      |                     ^~~~~~~~~~~~~~
+      |                     nodos_adyacentes
+sudoku.c:167:21: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+40919d4
