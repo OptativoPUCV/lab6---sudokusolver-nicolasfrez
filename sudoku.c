@@ -149,7 +149,13 @@ Node* DFS(Node* initial, int* cont)
     {
       Node* current = (Node*)top(stack);
       pop(stack);
+      cont++;
     }
+
+  if(is_final(current))
+  {
+    return current;
+  }
   return NULL;
 }
 

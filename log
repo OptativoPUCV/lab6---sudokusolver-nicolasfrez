@@ -420,3 +420,19 @@ sudoku.c:150:13: error: unused variable ‘current’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 053e1bb
+Fri 06 Oct 2023 07:34:56 PM UTC: 
+ sudoku.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:150:13: error: unused variable ‘current’ [-Werror=unused-variable]
+  150 |       Node* current = (Node*)top(stack);
+      |             ^~~~~~~
+sudoku.c:155:15: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  155 |   if(is_final(current))
+      |               ^~~~~~~
+      |               popCurrent
+sudoku.c:155:15: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation failed
+614140e
