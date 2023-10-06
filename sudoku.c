@@ -111,10 +111,9 @@ List* get_adj_nodes(Node* n)
           nuevo->sudo[i][j]=num;
           if(is_valid(nuevo)==1)
             pushBack(list, nuevo);
-          else
-            free(nuevo);
+
         }
-        break;
+        return list;
       }
       if(encontrado==1)
         break;
