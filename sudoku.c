@@ -166,8 +166,6 @@ Node* DFS(Node* initial, int* cont)
 
         if(is_valid(nodo_adyacente))
           push(stack, nodo_adyacente);
-        else
-          free(nodo_adyacente);
 
       }
       clean(nodos_adyacentes);
