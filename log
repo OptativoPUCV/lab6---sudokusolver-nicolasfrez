@@ -895,3 +895,34 @@ sudoku.c:165:37: error: ‘nodo_adyacente’ may be used uninitialized in this f
 cc1: all warnings being treated as errors
 Compilation failed
 a30a745
+Fri 06 Oct 2023 08:02:16 PM UTC: 
+ sudoku.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:164:45: error: passing argument 1 of ‘front’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  164 |         Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+      |                                             ^~~~~~~~~~~~~~
+      |                                             |
+      |                                             Node *
+In file included from test.c:4:
+list.h:15:19: note: expected ‘List *’ but argument is of type ‘Node *’
+   15 | void* front(List* list);
+      |             ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:165:18: error: passing argument 1 of ‘popFront’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  165 |         popFront(nodo_adyacente);
+      |                  ^~~~~~~~~~~~~~
+      |                  |
+      |                  Node *
+In file included from test.c:4:
+list.h:20:21: note: expected ‘List *’ but argument is of type ‘Node *’
+   20 | void popFront(List* list);
+      |               ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:164:39: error: ‘nodo_adyacente’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  164 |         Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+      |                                       ^~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e7cd6be

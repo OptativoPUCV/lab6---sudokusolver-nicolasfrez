@@ -145,31 +145,32 @@ Node* DFS(Node* initial, int* cont)
 {
   List* stack = createStack();
   push(stack, initial);
-  Node* current = (Node*)top(stack);
 
   while(!is_empty(stack))
     {
+      Node* current = (Node*)top(stack);
       pop(stack);
       (*cont)++;
-    }
 
-  if(is_final(current))
-  {
-    clean(stack);
-    return current;
-  }
+      if(is_final(current))
+      {
+        clean(stack);
+        return current;
+      }
 
-  List* nodo_adyacente = get_adj_nodes(current);
-  while(!is_empty(nodo_adyacente))
-    {
-      Node* nodo_adyacente = (Node*)front(nodo_adyacente);
-      popFront(nodo_adyacente);
+      List* nodo_adyacente = get_adj_nodes(current);
+      while(!is_empty(nodo_adyacente))
+      {
+        Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+        popFront(nodo_adyacente);
 
-      if(is_valid(nodo_adyacente))
-        push(stack, nodo_adyacente);
-      else
-        free(nodo_adyacente);
+        if(is_valid(nodo_adyacente))
+          push(stack, nodo_adyacente);
+        else
+          free(nodo_adyacente);
 
+      }
+      clean(nodo_adyacente);
     }
   
 
