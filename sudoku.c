@@ -163,7 +163,7 @@ Node* DFS(Node* initial, int* cont)
       while((aux = front(nodos_adyacentes)) != NULL)
       {
         popFront(nodos_adyacentes);
-        push(stack, nodos_adyacentes);
+        push(stack, aux);
       }
       free(current);
       clean(nodos_adyacentes);
