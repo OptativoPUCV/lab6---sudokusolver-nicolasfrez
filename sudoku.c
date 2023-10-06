@@ -160,7 +160,7 @@ Node* DFS(Node* initial, int* cont)
 
       List* nodos_adyacentes = get_adj_nodes(current);
       Node* aux;
-      while(copia==front(nodos_adyacentes)!=NULL)
+      while(aux==front(nodos_adyacentes)!=NULL)
       {
         popFront(nodos_adyacentes);
 
