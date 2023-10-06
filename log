@@ -452,3 +452,38 @@ sudoku.c:155:15: note: each undeclared identifier is reported only once for each
 cc1: all warnings being treated as errors
 Compilation failed
 d7a21d7
+Fri 06 Oct 2023 07:39:22 PM UTC: 
+ sudoku.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:150:13: error: unused variable ‘current’ [-Werror=unused-variable]
+  150 |       Node* current = (Node*)top(stack);
+      |             ^~~~~~~
+sudoku.c:155:15: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  155 |   if(is_final(current))
+      |               ^~~~~~~
+      |               popCurrent
+sudoku.c:155:15: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:164:43: error: passing argument 1 of ‘front’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  164 |       Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           Node *
+In file included from test.c:4:
+list.h:15:19: note: expected ‘List *’ but argument is of type ‘Node *’
+   15 | void* front(List* list);
+      |             ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:165:16: error: passing argument 1 of ‘popFront’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  165 |       popFront(nodo_adyacente);
+      |                ^~~~~~~~~~~~~~
+      |                |
+      |                Node *
+In file included from test.c:4:
+list.h:20:21: note: expected ‘List *’ but argument is of type ‘Node *’
+   20 | void popFront(List* list);
+      |               ~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b0cd20a

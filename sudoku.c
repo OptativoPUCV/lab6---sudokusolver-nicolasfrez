@@ -159,7 +159,11 @@ Node* DFS(Node* initial, int* cont)
   }
 
   List* nodo_adyacente = get_adj_nodes(current);
-  while(!is_empty(nodo_adyacente));
+  while(!is_empty(nodo_adyacente))
+    {
+      Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+      popFront(nodo_adyacente);
+    }
   return NULL;
 }
 
