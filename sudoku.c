@@ -144,10 +144,9 @@ int is_final(Node* n)
 Node* DFS(Node* initial, int* cont)
 {
   List* stack = createList();
-  /*List* stack = createList();
   pushFront(stack, initial);
 
-  while(!is_empty(stack))
+  while(!is_empty(stack)==0)
     {
       Node* current = top(stack);
       pop(stack);
@@ -172,7 +171,6 @@ Node* DFS(Node* initial, int* cont)
       clean(nodos_adyacentes);
     }
   
-*/
   return NULL;
 }
 
