@@ -393,3 +393,13 @@ sudoku.c:134:18: error: subscripted value is neither array nor pointer nor vecto
 cc1: all warnings being treated as errors
 Compilation failed
 e382ee6
+Fri 06 Oct 2023 07:14:25 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:134:18: error: subscripted value is neither array nor pointer nor vector
+  134 |           if(n[i][j]==0)
+      |                  ^
+Compilation failed
+62011ee

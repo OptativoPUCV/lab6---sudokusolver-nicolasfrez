@@ -127,9 +127,9 @@ List* get_adj_nodes(Node* n)
 
 int is_final(Node* n)
 {
-  for(int i=0; i<n ; i++)
+  for(int i=0; i<9 ; i++)
     {
-      for(int j=0 ; j<n ; j++)
+      for(int j=0 ; j<9 ; j++)
         {
           if(n[i][j]==0)
           {
