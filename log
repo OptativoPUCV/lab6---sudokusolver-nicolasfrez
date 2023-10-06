@@ -376,3 +376,20 @@ Thu 05 Oct 2023 04:02:56 AM UTC:
  tests:  5|3
 total_score: 35/70
 387ab04
+Fri 06 Oct 2023 07:14:13 PM UTC: 
+ sudoku.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:130:17: error: comparison between pointer and integer [-Werror]
+  130 |   for(int i=0; i<n ; i++)
+      |                 ^
+sudoku.c:132:22: error: comparison between pointer and integer [-Werror]
+  132 |       for(int j=0 ; j<n ; j++)
+      |                      ^
+sudoku.c:134:18: error: subscripted value is neither array nor pointer nor vector
+  134 |           if(n[i][j]==0)
+      |                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+e382ee6
