@@ -164,10 +164,10 @@ Node* DFS(Node* initial, int* cont)
         List* nodos_adyacentes = (Node*)front(nodos_adyacentes);
         popFront(nodos_adyacentes);
 
-        if(is_valid(nodo_adyacente))
-          push(stack, nodo_adyacente);
+        if(is_valid(nodos_adyacentes))
+          push(stack, nodos_adyacentes);
         else
-          free(nodo_adyacente);
+          free(nodos_adyacentes);
 
       }
       clean(nodos_adyacentes);
