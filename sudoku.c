@@ -161,7 +161,7 @@ Node* DFS(Node* initial, int* cont)
       List* nodo_adyacente = get_adj_nodes(current);
       while(!is_empty(nodo_adyacente))
       {
-        Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+        nodo_adyacente = (Node*)front(nodos_adyacentes);
         popFront(nodo_adyacente);
 
         if(is_valid(nodo_adyacente))
@@ -179,7 +179,7 @@ Node* DFS(Node* initial, int* cont)
 
 
 
-
+/*
 int main( int argc, char *argv[] ){
 
   Node* initial= read_file("s12a.txt");;
@@ -190,4 +190,4 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}
+}*/
