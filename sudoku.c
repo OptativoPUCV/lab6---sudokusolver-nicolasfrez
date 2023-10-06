@@ -170,7 +170,7 @@ Node* DFS(Node* initial, int* cont)
           free(nodo_adyacente);
 
       }
-      clean(nodo_adyacente);
+      clean(nodos_adyacentes);
     }
   
 

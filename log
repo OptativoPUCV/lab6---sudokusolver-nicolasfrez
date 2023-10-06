@@ -1127,3 +1127,8 @@ sudoku.c:173:13: error: ‘nodo_adyacente’ undeclared (first use in this funct
 sudoku.c:173:13: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 f6de07e
+Fri 06 Oct 2023 09:34:05 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+2b42701
