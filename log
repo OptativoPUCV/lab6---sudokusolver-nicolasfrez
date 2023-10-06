@@ -1034,3 +1034,15 @@ sudoku.c:164:9: error: ‘nodo_adyacente’ undeclared (first use in this functi
 sudoku.c:164:9: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 def78d4
+Fri 06 Oct 2023 09:25:51 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:164:47: error: ‘nodo_adyacente’ undeclared (first use in this function); did you mean ‘nodos_adyacentes’?
+  164 |         List* nodos_adyacentes = (Node*)front(nodo_adyacente);
+      |                                               ^~~~~~~~~~~~~~
+      |                                               nodos_adyacentes
+sudoku.c:164:47: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+0835fa9
