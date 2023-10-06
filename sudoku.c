@@ -154,8 +154,12 @@ Node* DFS(Node* initial, int* cont)
 
   if(is_final(current))
   {
+    clean(stack);
     return current;
   }
+
+  List* nodo_adyacente = get_adj_nodes(current);
+  while(!is_empty(nodo_adyacente));
   return NULL;
 }
 
