@@ -1170,3 +1170,22 @@ Fri 06 Oct 2023 09:53:19 PM UTC:
  tests:  6|2
 total_score: 45/70
 3fcecad
+Fri 06 Oct 2023 09:55:41 PM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:163:13: error: ‘copia’ undeclared (first use in this function)
+  163 |       while(copia==front(nodos_adyacentes)!=NULL)
+      |             ^~~~~
+sudoku.c:163:13: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:167:21: error: ‘nodo_adyacente’ undeclared (first use in this function); did you mean ‘nodos_adyacentes’?
+  167 |         if(is_valid(nodo_adyacente))
+      |                     ^~~~~~~~~~~~~~
+      |                     nodos_adyacentes
+sudoku.c:162:13: error: unused variable ‘aux’ [-Werror=unused-variable]
+  162 |       Node* aux;
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e2535a5
