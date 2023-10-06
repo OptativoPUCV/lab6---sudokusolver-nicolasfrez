@@ -150,7 +150,7 @@ Node* DFS(Node* initial, int* cont)
   while(!is_empty(stack))
     {
       pop(stack);
-      cont++;
+      (*cont)++;
     }
 
   if(is_final(current))
