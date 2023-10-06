@@ -158,11 +158,11 @@ Node* DFS(Node* initial, int* cont)
         return current;
       }
 
-      List* nodo_adyacente = get_adj_nodes(current);
-      while(!is_empty(nodo_adyacente))
+      List* nodos_adyacentes = get_adj_nodes(current);
+      while(!is_empty(nodos_adyacentes))
       {
         nodo_adyacente = (Node*)front(nodo_adyacente);
-        popFront(nodo_adyacente);
+        popFront(nodos_adyacentes);
 
         if(is_valid(nodo_adyacente))
           push(stack, nodo_adyacente);
@@ -170,7 +170,7 @@ Node* DFS(Node* initial, int* cont)
           free(nodo_adyacente);
 
       }
-      clean(nodo_adyacente);
+      clean(nodos_adyacentes);
     }
   
 
