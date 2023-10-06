@@ -164,7 +164,7 @@ Node* DFS(Node* initial, int* cont)
       {
         popFront(nodos_adyacentes);
 
-        if(is_valid(nodo_adyacente))
+        if(is_valid(nodos_adyacentes))
           push(stack, nodo_adyacente);
 
       }
