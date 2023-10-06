@@ -982,3 +982,24 @@ sudoku.c:46:20: note: expected ‘Node *’ but argument is of type ‘List *’
 cc1: all warnings being treated as errors
 Compilation failed
 605e337
+Fri 06 Oct 2023 08:07:21 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:164:39: error: ‘nodos_adyacente’ undeclared (first use in this function); did you mean ‘nodo_adyacente’?
+  164 |         nodo_adyacente = (Node*)front(nodos_adyacente);
+      |                                       ^~~~~~~~~~~~~~~
+      |                                       nodo_adyacente
+sudoku.c:164:39: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:167:21: error: passing argument 1 of ‘is_valid’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  167 |         if(is_valid(nodo_adyacente))
+      |                     ^~~~~~~~~~~~~~
+      |                     |
+      |                     List *
+sudoku.c:46:20: note: expected ‘Node *’ but argument is of type ‘List *’
+   46 | int is_valid(Node* n)
+      |              ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+bbeef45
