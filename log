@@ -610,3 +610,47 @@ sudoku.c:46:20: note: expected ‘Node *’ but argument is of type ‘List *’
 cc1: all warnings being treated as errors
 Compilation failed
 f7a8342
+Fri 06 Oct 2023 07:46:38 PM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:151:13: error: unused variable ‘current’ [-Werror=unused-variable]
+  151 |       Node* current = (Node*)top(stack);
+      |             ^~~~~~~
+sudoku.c:156:15: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  156 |   if(is_final(current))
+      |               ^~~~~~~
+      |               popCurrent
+sudoku.c:156:15: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:165:43: error: passing argument 1 of ‘front’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  165 |       Node* nodo_adyacente = (Node*)front(nodo_adyacente);
+      |                                           ^~~~~~~~~~~~~~
+      |                                           |
+      |                                           Node *
+In file included from test.c:4:
+list.h:15:19: note: expected ‘List *’ but argument is of type ‘Node *’
+   15 | void* front(List* list);
+      |             ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:166:16: error: passing argument 1 of ‘popFront’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  166 |       popFront(nodo_adyacente);
+      |                ^~~~~~~~~~~~~~
+      |                |
+      |                Node *
+In file included from test.c:4:
+list.h:20:21: note: expected ‘List *’ but argument is of type ‘Node *’
+   20 | void popFront(List* list);
+      |               ~~~~~~^~~~
+In file included from test.c:5:
+sudoku.c:169:15: error: passing argument 1 of ‘is_valid’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+  169 |   if(is_valid(nodo_adyacente))
+      |               ^~~~~~~~~~~~~~
+      |               |
+      |               List *
+sudoku.c:46:20: note: expected ‘Node *’ but argument is of type ‘List *’
+   46 | int is_valid(Node* n)
+      |              ~~~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+e59ee22
