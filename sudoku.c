@@ -145,10 +145,10 @@ Node* DFS(Node* initial, int* cont)
 {
   List* stack = createStack();
   push(stack, initial);
+  Node* current = (Node*)top(stack);
 
   while(!is_empty(stack))
     {
-      Node* current = (Node*)top(stack);
       pop(stack);
       cont++;
     }
